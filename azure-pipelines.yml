@@ -26,13 +26,13 @@ steps:
   inputs:
     PackageId: 'helloWorld'
     PackageFormat: 'NuPkg'
-    PackageVersion: '0.0.$Build.BuildNumber'
+    PackageVersion: '0.0.$(Build.BuildNumber)'
 - task: OctopusMetadata@4
   inputs:
     OctoConnectedServiceName: 'Lauren Devops'
     Space: 'Spaces-1'
     PackageId: 'helloWorld'
-    PackageVersion: '0.0.$Build.BuildNumber'
+    PackageVersion: '0.0.$(Build.BuildNumber)'
     Replace: 'true'
 - task: OctopusPush@4
   inputs:
