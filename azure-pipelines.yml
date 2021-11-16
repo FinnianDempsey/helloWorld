@@ -27,6 +27,7 @@ steps:
     PackageId: 'helloWorld'
     PackageFormat: 'NuPkg'
     PackageVersion: '0.0.$(Build.BuildNumber)'
+    OutputPath: '$(Build.BinariesDirectory)'
 - task: OctopusMetadata@4
   inputs:
     OctoConnectedServiceName: 'Lauren Devops'
@@ -38,5 +39,5 @@ steps:
   inputs:
     OctoConnectedServiceName: 'Lauren Devops'
     Space: 'Spaces-1'
-    Package: '$(Build.BinariesDirectory)/helloWorld'
+    Package: '$(Build.BinariesDirectory)/helloWorld.0.0.$(Build.BuildNumber)'
     Replace: 'true'
