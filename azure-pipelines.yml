@@ -38,5 +38,5 @@ steps:
   inputs:
     OctoConnectedServiceName: 'Lauren Devops'
     Space: 'Spaces-1'
-    Package: 'helloWorld'
+    Package: '$(Build.BinariesDirectory)/helloWorld'
     Replace: 'true'
